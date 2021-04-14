@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class frontEnd {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		int opInt=0;
 		Scanner scan= new Scanner(System.in);
@@ -38,8 +38,9 @@ public class frontEnd {
 				newUser.setEmail(email);
 				System.out.println("Enter password");
 				password = scan.next();
-				newUser.setPassword(email);
+				newUser.setPassword(password);
 				ProfileDAO.addUser(newUser);
+				ConnectDatabase.post(firstName, lastName, email, password);
 				break;
 			case 2:
 				//displayAll
