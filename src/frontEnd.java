@@ -26,6 +26,7 @@ public class frontEnd {
 				String firstName;
 				String lastName;
 				String email;
+				String password;
 				System.out.println("Enter first name:");
 				firstName= scan.next();
 				newUser.setFirstName(firstName);
@@ -35,7 +36,9 @@ public class frontEnd {
 				System.out.println("Enter email:");
 				email = scan.next();
 				newUser.setEmail(email);
-				
+				System.out.println("Enter password");
+				password = scan.next();
+				newUser.setPassword(email);
 				ProfileDAO.addUser(newUser);
 				break;
 			case 2:
